@@ -3,6 +3,10 @@ import Image from "next/image";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+type LayoutProps = {
+  children: any;
+  home: any;
+};
 
 const name = "Zouina";
 export const siteTitle = "Next.js Sample Website";
