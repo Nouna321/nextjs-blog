@@ -3,7 +3,7 @@ import Date from "../../components/date";
 import Head from "next/head";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import utilStyles from "../../styles/utils.module.css";
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
+import { GetStaticProps, GetStaticPaths } from "next";
 export default function Post({ postData }) {
   return (
     <Layout home={false}>
@@ -34,17 +34,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       postData,
-    },
-  };
-};
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  // Fetch data and return it as props
-  // const data = await fetchData(); // Replace with your data fetching logic
-
-  return {
-    props: {
-      data: "hello",
     },
   };
 };
